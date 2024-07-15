@@ -1,7 +1,7 @@
 api Version: v1
 kind: pod
 metadata:
- name: my-pod
+ name: naga-pod
  spec:
   containers:
    - name: mycontainer
