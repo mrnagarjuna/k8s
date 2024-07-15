@@ -1,11 +1,10 @@
-api Version: v1
-kind: pod
+apiVersion: v1
+kind: Pod
 metadata:
- name: naga-pod
- spec:
+  name: my-pod
+spec:
   containers:
-   - name: mycontainer
-     image: nginx
-     ports:
-     - containersport:80
-
+    - name: mycontainer
+      image: nginx
+      ports:
+        - containerPort: 80
