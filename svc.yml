@@ -4,7 +4,8 @@ kind: Service   # Specify the Kubernetes resource kind
 metadata:
   name: myapp-svc  # Name of the Service
   labels:
-    app: myapp     # Labels associated with the Service
+    app: myapp 
+    version: 2.6.1    # Labels associated with the Service
 
 spec:
   type: NodePort   # Type of the Service (NodePort in this case)
@@ -13,4 +14,5 @@ spec:
       nodePort: 30001  # NodePort to be used (typo corrected here from 'nodeport' to 'nodePort')
       protocol: TCP  # Protocol used for the port (typo corrected here from 'protocall' to 'protocol')
   selector:
-    app: myapp     # Selector to match Pods targeted by this Service
+    app: myapp  
+    version: 2.6.1   # Selector to match Pods targeted by this Service
