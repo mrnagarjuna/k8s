@@ -6,13 +6,13 @@ spec:
   replicas: 5
   selector:
     app: myapp
-    version: 2.6.2
+    version: 2.6.1
   template:
     metadata:
       name: myapp
       labels:
         app: myapp
-        version: 2.6.2
+        version: 2.6.1
     spec:
       containers:
         - name: myapp-container
