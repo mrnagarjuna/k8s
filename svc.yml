@@ -1,0 +1,14 @@
+api apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-SVC
+  labels:
+    app: myapp
+spec:
+ type: Nodeport
+ ports:
+ - port: 8080
+   nodeport: 30001
+   protocall: TCP
+ selector: 
+   app: myapp
