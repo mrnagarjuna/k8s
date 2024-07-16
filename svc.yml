@@ -1,14 +1,16 @@
-api apiVersion: v1
-kind: Service
+apiVersion: v1  # Specify the API version
+kind: Service   # Specify the Kubernetes resource kind
+
 metadata:
-  name: myapp-SVC
+  name: myapp-svc  # Name of the Service
   labels:
-    app: myapp
+    app: myapp     # Labels associated with the Service
+
 spec:
- type: Nodeport
- ports:
- - port: 8080
-   nodeport: 30001
-   protocall: TCP
- selector: 
-   app: myapp
+  type: NodePort   # Type of the Service (NodePort in this case)
+  ports:
+    - port: 8080   # Port exposed by the Service
+      nodePort: 30001  # NodePort to be used (typo corrected here from 'nodeport' to 'nodePort')
+      protocol: TCP  # Protocol used for the port (typo corrected here from 'protocall' to 'protocol')
+  selector:
+    app: myapp     # Selector to match Pods targeted by this Service
