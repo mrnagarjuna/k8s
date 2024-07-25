@@ -2,11 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   name: myjavaapp-svc
+  labels: 
+    app: myjavaapp  # Specify a value for the 'app' label
 spec:
   type: NodePort
   ports:
     - port: 8080   # This is the port your service listens on internally
       targetPort: 8080  # This is the port your application listens on
-      nodePort: 30002  # Use a different available NodePort, like 30002
+      nodePort: 30002
+      protocol: TCP  # Use a different available NodePort, like 30002
   selector:
     app: myjavaapp   # Make sure this selector matches your deployment or pods
