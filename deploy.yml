@@ -3,12 +3,12 @@ kind: Deployment
 metadata:
   name: myjavaapp-deploy
   labels:
-   app: myjavapp
+    app: myjavaapp  # This should match the selector and template labels
 spec:
   replicas: 3
   selector:
     matchLabels:
-       app: myjavaapp
+      app: myjavaapp
   template:
     metadata:
       labels:
