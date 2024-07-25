@@ -3,16 +3,16 @@ kind: ReplicationController
 metadata:
   name: myapp-rc
 spec:
-  replicas: 5
+  replicas: 1
   selector:
     app: myapp
-    version: 2.6.1
+    version: 2.6.2
   template:
     metadata:
       name: myapp
       labels:
         app: myapp
-        version: 2.6.1
+        version: 2.6.2
     spec:
       containers:
         - name: myapp-container
