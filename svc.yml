@@ -5,7 +5,7 @@ metadata:
   name: myapp-svc  # Name of the Service
   labels:
     app: myapp 
-    version: 2.6.2    # Labels associated with the Service
+    version: 2.6.1    # Labels associated with the Service
 
 spec:
   type: NodePort   # Type of the Service (NodePort in this case)
@@ -15,4 +15,4 @@ spec:
       protocol: TCP  # Protocol used for the port (typo corrected here from 'protocall' to 'protocol')
   selector:
     app: myapp  
-    version: 2.6.2   # Selector to match Pods targeted by this Service
+    version: 2.6.1   # Selector to match Pods targeted by this Service
