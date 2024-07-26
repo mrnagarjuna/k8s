@@ -9,7 +9,7 @@ spec:
   ports:
     - port: 8080   # This is the port your service listens on internally
       targetPort: 8080  # This is the port your application listens on
-      nodePort: 30003
+      nodePort: 30001
       protocol: TCP  # Use a different available NodePort, like 30002
   selector:
     app: myjavaapp   # Make sure this selector matches your deployment or pods
