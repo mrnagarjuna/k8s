@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: flask_appp_svc
+  name: flaskapppsvc
   labels: 
     app: flask_app  # Specify a value for the 'app' label
 spec:
