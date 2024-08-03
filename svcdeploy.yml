@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myjavaapp-svc
+  name: flask_appp-svc
   labels: 
-    app: myjavaapp  # Specify a value for the 'app' label
+    app: flask_app  # Specify a value for the 'app' label
 spec:
   type: NodePort
   ports:
-    - port: 8080   # This is the port your service listens on internally
-      targetPort: 8080  # This is the port your application listens on
+    - port: 8888   # This is the port your service listens on internally
+      targetPort: 8888  # This is the port your application listens on
       nodePort: 30001
       protocol: TCP  # Use a different available NodePort, like 30002
   selector:
-    app: myjavaapp   # Make sure this selector matches your deployment or pods
+    app: flask_app   # Make sure this selector matches your deployment or pods
