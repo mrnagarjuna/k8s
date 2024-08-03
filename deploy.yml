@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask_app_deploy
+  name: flaskappdeploy
   labels:
     app: flask_app  # This should match the selector and template labels
 spec:
@@ -15,7 +15,7 @@ spec:
         app: flask_app
     spec:
       containers:
-        - name: flask_app_container
+        - name: flaskappcontainer
           image: nagarjunaboddupalli/flask_demo
           ports:
             - containerPort: 8888
