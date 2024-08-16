@@ -7,8 +7,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 8888   # This is the port your service listens on internally
-      targetPort: 8888  # This is the port your application listens on
+    - port: 50000   # This is the port your service listens on internally
+      targetPort: 50000  # This is the port your application listens on
       nodePort: 30002
       protocol: TCP  # Use a different available NodePort, like 30002
   selector:
