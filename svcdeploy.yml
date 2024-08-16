@@ -8,7 +8,7 @@ spec:
   type: NodePort
   ports:
     - port: 50000   # This is the port the service exposes internally
-      targetPort: 50000  # This is the port the application listens on
+      targetPort: 5000  # This is the port the application listens on
       nodePort: 30002  # Ensure this is within the valid range (30000-32767)
       protocol: TCP
   selector:
