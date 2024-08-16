@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: flaskappdeploy
   labels:
-    app: flask_app  # This should match the selector and template labels
+    app: nagaapp  # This should match the selector and template labels
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: flask_app
+      app: nagaapp
   template:
     metadata:
       labels:
-        app: flask_app
+        app: nagaapp
     spec:
       containers:
         - name: flaskappcontainer
-          image: nagarjunaboddupalli/flask_demo
+          image: nagarjunaboddupalli/nagaapp
           ports:
             - containerPort: 8888
