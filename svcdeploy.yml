@@ -7,9 +7,9 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 8080   # This is the port the service exposes internally
-      targetPort: 5000  # This is the port the application listens on
-      nodePort: 30001  # Ensure this is within the valid range (30000-32767)
+    - port: 8080        # The port the service exposes internally
+      targetPort: 8080  # The port the application listens on inside the Pod
+      nodePort: 30001   # External port on the node (range: 30000-32767)
       protocol: TCP
   selector:
     app: myjavaapp  # This should match the labels used in the Deployment or Pods
