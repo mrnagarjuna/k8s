@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flaskappdeploy
+  name: myjavaappdeploy
   labels:
-    app: nagaapp  # This should match the selector and template labels
+    app: myjavaapp  # This should match the selector and template labels
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: nagaapp
+      app: myjavaapp
   template:
     metadata:
       labels:
-        app: nagaapp
+        app: myjavaapp
     spec:
       containers:
-        - name: flaskappcontainer
-          image: nagarjunaboddupalli/nagaapp
+        - name: myjavaapp-container  # Added space after colon for readability
+          image: nagarjunaboddupalli/myjavaapp
           ports:
-            - containerPort:5000
+            - containerPort: 8080  # Added space after colon for consistency
